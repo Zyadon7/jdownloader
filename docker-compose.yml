@@ -1,1 +1,9 @@
-sdf
+version: "2"
+services:
+  jdownloader-2:
+    image: jlesage/jdownloader-2
+    ports:
+      - ${PORT}:5800
+    volumes:
+      - ${CONFIG}:/config:rw
+      - ${OUTPUT}:/output:rw
